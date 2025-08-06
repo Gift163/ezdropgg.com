@@ -1,34 +1,53 @@
 {
-  "name": "ezdrop",
+  "name": "ezdrop-frontend",
   "version": "1.0.0",
-  "description": "EZDROP - Telegram Mini App with Gaming & NFT Marketplace",
+  "description": "EZDROP Telegram Mini App Frontend",
   "private": true,
-  "workspaces": [
-    "frontend"
-  ],
+  "dependencies": {
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "autoprefixer": "^10.4.15",
+    "axios": "^1.5.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.292.0",
+    "postcss": "^8.4.29",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.16.0",
+    "react-scripts": "^0.0.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^4.9.2",
+    "web-vitals": "^3.5.0",
+    "zustand": "^4.4.1"
+  },
   "scripts": {
-    "dev": "cd frontend && npm start",
-    "build": "cd frontend && npm run build",
-    "start": "cd frontend && npm start",
-    "install:all": "cd frontend && npm install"
+    "start": "react-scripts start",
+    "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/ezdrop.git"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "keywords": [
-    "telegram",
-    "webapp",
-    "gaming",
-    "nft",
-    "crypto",
-    "react",
-    "typescript"
-  ],
-  "author": "EZDROP Team",
-  "license": "MIT"
-} 
+  "devDependencies": {
+    "@types/jest": "^29.5.5"
+  }
+}
