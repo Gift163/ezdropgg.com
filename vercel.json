@@ -20,6 +20,6 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@api-url"
+    "REACT_APP_API_URL": "http://ezdropggcom-production.up.railway.app"
   }
 } 
