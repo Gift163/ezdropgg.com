@@ -66,4 +66,4 @@ bot/session/
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp node_modules
