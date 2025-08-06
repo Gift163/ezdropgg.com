@@ -1,19 +1,23 @@
-# Используем Node.js 18
+# Используем Node 18
 FROM node:18
 
-# Устанавливаем рабочую директорию
+# Рабочая директория внутри контейнера
 WORKDIR /app
 
-# Копируем package.json и устанавливаем зависимости
+# Копируем package.json и package-lock.json
 COPY package*.json ./
+
+# Устанавливаем зависимости
 RUN npm install
 
-# Копируем всё остальное
+# Копируем остальные файлы
 COPY . .
 
-# Собираем проект
+# Билдим фронтенд (если у тебя React, Next.js и т.п.)
 RUN npm run build
 
-# Устанавливаем serve и запускаем
-RUN npm install -g serve
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Указываем порт
+EXPOSE 3000
+
+# Запускаем проект
+CMD ["npm", "start"]
